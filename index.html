@@ -13,9 +13,11 @@
 
     <!-- Header -->
     <header>
+
         <h1>🎬 Movie Discovery App</h1>
 
         <div class="theme-switch">
+
             <span>🌞</span>
 
             <label class="switch">
@@ -24,7 +26,9 @@
             </label>
 
             <span>🌙</span>
+
         </div>
+
     </header>
 
     <!-- Layout -->
@@ -33,7 +37,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
 
-            <h2>Tìm kiếm</h2>
+            <h2>Tìm kiếm phim</h2>
 
             <input
                 type="text"
@@ -42,9 +46,7 @@
 
             <h2>Thể loại</h2>
 
-            <div id="genreList">
-                <!-- JavaScript tự tạo checkbox -->
-            </div>
+            <div id="genreList"></div>
 
         </aside>
 
@@ -53,7 +55,7 @@
 
             <div id="movieContainer" class="movie-grid">
 
-                <!-- Card phim sẽ sinh tự động -->
+                <!-- JavaScript sẽ tự tạo Movie Card -->
 
             </div>
 
@@ -68,14 +70,14 @@
 
             <span id="closeModal">&times;</span>
 
-            <div id="modalBody">
-
-            </div>
+            <div id="modalBody"></div>
 
         </div>
 
     </div>
 
+    <!-- JavaScript -->
+    <script src="js/movies.js"></script>
     <script src="js/app.js"></script>
 
 </body>
