@@ -7,7 +7,7 @@ const movies = [
     director: "Tsutomu Mizushima",
     actors: "Mai Fuchigami, Ai Kayano, Mami Ozaki",
     description: "Sau chiến thắng tại giải toàn quốc, Ooarai Girls' Academy tiếp tục hành trình trong thế giới Sensha-dō. Đối đầu với BC Freedom Academy, Miho Nishizumi cùng đồng đội phải vượt qua những chiến thuật khó đoán và những trận đấu xe tăng đầy kịch tính.",
-    poster: "images/part1.jpg"
+    poster: "images/part1.webp"
 },
 
 {
@@ -17,7 +17,7 @@ const movies = [
     director: "Tsutomu Mizushima",
     actors: "Mai Fuchigami, Ai Kayano, Mami Ozaki",
     description: "Trận chiến giữa Ooarai và BC Freedom Academy tiếp tục diễn ra căng thẳng. Với khả năng chỉ huy tài tình của Miho, đội xe tăng Ooarai phải tìm ra chiến thuật mới để vượt qua đối thủ mạnh.",
-    poster: "images/part2.jpg"
+    poster: "images/part2.webp"
 },
 
 {
@@ -27,7 +27,7 @@ const movies = [
     director: "Tsutomu Mizushima",
     actors: "Mai Fuchigami, Ai Kayano, Mami Ozaki",
     description: "Ooarai bước vào trận chiến mới với Chihatan Academy. Những cuộc đối đầu tốc độ cao cùng các chiến thuật táo bạo khiến trận đấu trở thành một thử thách lớn.",
-    poster: "images/part3.jpg"
+    poster: "images/part3.webp"
 },
 
 {
@@ -37,7 +37,7 @@ const movies = [
     director: "Tsutomu Mizushima",
     actors: "Mai Fuchigami, Ai Kayano, Mami Ozaki",
     description: "Giải đấu tiến vào giai đoạn quyết định với những đội tuyển mạnh nhất. Ooarai phải vận dụng mọi kỹ năng chiến đấu, tinh thần đồng đội và chiến thuật xe tăng để tiến gần hơn đến chức vô địch.",
-    poster: "images/part4.jpg"
+    poster: "images/part4.webp"
 },
 
 {
@@ -47,7 +47,7 @@ const movies = [
     director: "Tsutomu Mizushima",
     actors: "Mai Fuchigami, Ai Kayano, Mami Ozaki",
     description: "Hành trình của Ooarai bước vào giai đoạn cao trào khi những trận chiến cuối cùng đang đến gần. Những chiến thuật mới, các mẫu xe tăng mạnh mẽ và tinh thần chiến đấu của các đội tuyển tạo nên màn đối đầu hoành tráng.",
-    poster: "images/part5.jpg"
+    poster: "images/part5.webp"
 },
 
 {
@@ -67,7 +67,7 @@ const movies = [
     director: "Destin Daniel Cretton",
     actors: "Tom Holland, Zendaya, Jacob Batalon",
     description: "Peter Parker bắt đầu một chương mới sau những biến cố lớn trong cuộc đời. Khi những mối nguy hiểm mới xuất hiện, Spider-Man phải đối mặt với thử thách để bảo vệ những người xung quanh và tiếp tục con đường của một người anh hùng.",
-    poster: "images/spiderman-brandnewday.jpg"
+    poster: "images/spider.jpg"
 }
 
 ];
