@@ -11,63 +11,62 @@ const themeToggle = document.getElementById("themeToggle");
 
 // Hiển thị phim
 
-function displayMovies(list){
+function showMovies(list){
 
-    movieContainer.innerHTML = "";
+    movieContainer.innerHTML="";
 
-    list.forEach(movie => {
 
-        movieContainer.innerHTML += `
+    list.forEach(movie=>{
 
-        <div class="movie-card">
 
-            <img src="${movie.poster}">
+        let card=document.createElement("div");
 
-            <div class="movie-info">
+        card.className="movie-card";
 
-                <h3>${movie.title}</h3>
 
-                <p>${movie.year}</p>
+        card.innerHTML=`
 
-            </div>
+        <img src="${movie.poster}">
+
+        <div class="movie-info">
+
+        <h3>${movie.title}</h3>
+
+        <p>${movie.year}</p>
 
         </div>
 
         `;
 
-    });
+
+        card.onclick=()=>showDetail(movie);
 
 
-    document.querySelectorAll(".movie-card")
-    .forEach((card,index)=>{
+        movieContainer.appendChild(card);
 
-        card.onclick=function(){
-
-            showMovie(list[index]);
-
-        }
 
     });
 
 }
 
 
-displayMovies(movies);
+showMovies(movies);
+
 
 
 
 // Tạo thể loại
 
-let allGenres=[];
+let genres=[];
 
 
 movies.forEach(movie=>{
 
     movie.genres.forEach(g=>{
 
-        if(!allGenres.includes(g)){
+        if(!genres.includes(g)){
 
-            allGenres.push(g);
+            genres.push(g);
 
         }
 
@@ -76,10 +75,10 @@ movies.forEach(movie=>{
 });
 
 
-allGenres.forEach(g=>{
+genres.forEach(g=>{
 
 
-    genreList.innerHTML += `
+    genreList.innerHTML+=`
 
     <label>
 
@@ -97,18 +96,20 @@ allGenres.forEach(g=>{
 
 
 
-// Lọc phim
 
-function filterMovies(){
+// Lọc + tìm kiếm
+
+function filterMovie(){
 
 
-    let keyword=
+    let text=
     searchInput.value.toLowerCase();
+
 
 
     let checked=
     [...document.querySelectorAll("#genreList input:checked")]
-    .map(e=>e.value);
+    .map(x=>x.value);
 
 
 
@@ -117,24 +118,23 @@ function filterMovies(){
 
         let name=
         movie.title.toLowerCase()
-        .includes(keyword);
+        .includes(text);
 
 
 
-        let genre=
-        checked.length===0 ||
+        let type=
+        checked.length==0 ||
         checked.some(g=>movie.genres.includes(g));
 
 
-
-        return name && genre;
+        return name && type;
 
 
     });
 
 
 
-    displayMovies(result);
+    showMovies(result);
 
 
 }
@@ -143,21 +143,22 @@ function filterMovies(){
 
 searchInput.addEventListener(
 "input",
-filterMovies
+filterMovie
 );
 
 
 genreList.addEventListener(
 "change",
-filterMovies
+filterMovie
 );
 
 
 
 
-// MODAL
 
-function showMovie(movie){
+// Modal
+
+function showDetail(movie){
 
 
 modal.style.display="flex";
@@ -166,7 +167,6 @@ modal.style.display="flex";
 modalBody.innerHTML=`
 
 <div class="modal-body">
-
 
 <img src="${movie.poster}">
 
@@ -190,21 +190,17 @@ ${movie.actors}</p>
 
 <p>${movie.description}</p>
 
-
 </div>
 
-
 </div>
-
 
 `;
-
 
 }
 
 
 
-closeModal.onclick=function(){
+closeModal.onclick=()=>{
 
 modal.style.display="none";
 
@@ -213,29 +209,30 @@ modal.style.display="none";
 
 
 
-// DARK MODE
+
+// Dark Mode
 
 
-if(localStorage.getItem("dark")=="true"){
+if(localStorage.getItem("mode")=="dark"){
 
-    document.body.classList.add("dark-mode");
+document.body.classList.add("dark-mode");
 
-    themeToggle.checked=true;
+themeToggle.checked=true;
 
 }
 
 
 
-themeToggle.addEventListener("change",()=>{
+themeToggle.onchange=function(){
 
 
 document.body.classList.toggle("dark-mode");
 
 
 localStorage.setItem(
-"dark",
+"mode",
 document.body.classList.contains("dark-mode")
 );
 
 
-});
+};
