@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Movie Discovery App</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -11,74 +12,109 @@
 
 <body>
 
-    <!-- Header -->
-    <header>
+<header>
 
-        <h1>🎬 Movie Discovery App</h1>
+    <h1>🎬 Movie Discovery App</h1>
 
-        <div class="theme-switch">
+    <div class="theme-switch">
 
-            <span>🌞</span>
+        <span>☀️</span>
 
-            <label class="switch">
-                <input type="checkbox" id="themeToggle">
-                <span class="slider"></span>
-            </label>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
 
-            <span>🌙</span>
-
-        </div>
-
-    </header>
-
-    <!-- Layout -->
-    <div class="container">
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-
-            <h2>Tìm kiếm phim</h2>
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Nhập tên phim...">
-
-            <h2>Thể loại</h2>
-
-            <div id="genreList"></div>
-
-        </aside>
-
-        <!-- Main -->
-        <main>
-
-            <div id="movieContainer" class="movie-grid">
-
-                <!-- JavaScript sẽ tự tạo Movie Card -->
-
-            </div>
-
-        </main>
+        <span>🌙</span>
 
     </div>
 
-    <!-- Modal -->
-    <div id="movieModal" class="modal">
+</header>
 
-        <div class="modal-content">
 
-            <span id="closeModal">&times;</span>
+<div class="container">
 
-            <div id="modalBody"></div>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>🔎 Tìm kiếm</h2>
+
+        <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Nhập tên phim...">
+
+
+        <h2>🎞️ Thể loại</h2>
+
+        <div id="genreList">
+
+            <!-- JavaScript tự tạo checkbox -->
 
         </div>
 
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <h2 class="title">
+            Danh sách phim
+        </h2>
+
+
+        <div id="movieContainer" class="movie-grid">
+
+            <!-- JavaScript tạo card phim -->
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+
+<!-- MODAL CHI TIẾT PHIM -->
+
+<div id="movieModal" class="modal">
+
+
+    <div class="modal-content">
+
+
+        <span id="closeModal">
+            &times;
+        </span>
+
+
+        <div id="modalBody">
+
+            <!-- Nội dung phim -->
+
+        </div>
+
+
     </div>
 
-    <!-- JavaScript -->
-    <script src="js/movies.js"></script>
-    <script src="js/app.js"></script>
+
+</div>
+
+
+
+<script src="js/movies.js"></script>
+
+<script src="js/app.js"></script>
+
 
 </body>
 
