@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Discovery App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🎬 Movie Discovery App</h1>
+
+        <div class="theme-switch">
+            <span>🌞</span>
+
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+
+            <span>🌙</span>
+        </div>
+    </header>
+
+    <!-- Layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Tìm kiếm</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Nhập tên phim...">
+
+            <h2>Thể loại</h2>
+
+            <div id="genreList">
+                <!-- JavaScript tự tạo checkbox -->
+            </div>
+
+        </aside>
+
+        <!-- Main -->
+        <main>
+
+            <div id="movieContainer" class="movie-grid">
+
+                <!-- Card phim sẽ sinh tự động -->
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="movieModal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">&times;</span>
+
+            <div id="modalBody">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
